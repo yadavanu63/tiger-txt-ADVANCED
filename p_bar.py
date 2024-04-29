@@ -86,11 +86,6 @@ async def progress_bar(current, total, reply, start):
             sp = str(hrb(speed)) + "/s"
             tot = hrb(total)
             cur = hrb(current)
-            
-            #don't even change anything till here
-            # Calculate progress bar dots
-            #ab mila dil ko sukun #by Kshitij
-            #change from here if you want 
             bar_length = 11
             completed_length = int(current * bar_length / total)
             remaining_length = bar_length - completed_length
