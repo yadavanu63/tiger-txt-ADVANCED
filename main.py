@@ -30,7 +30,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER BOT MADE BY TIGER BOSS [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /baby")
+    editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER\n\n BOT MADE BY Tapori 2.0 😇")
 
 
 @bot.on_message(filters.command("rukja") & filters.user(ADMINS))
@@ -41,7 +41,7 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["baby"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
+    editable = await m.reply_text(f"**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
@@ -109,7 +109,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name or send `de` for use default**")
+    await editable.edit("**Enter Your Name or send**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -211,7 +211,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("🔰Done Boss🔰")
+    await m.reply_text("🔰Batch Complete Successful✅")
 
 
 bot.run()
