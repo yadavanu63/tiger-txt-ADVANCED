@@ -169,8 +169,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {name1} ({res}) Tapori 🥷.mkv\n**Bᴀᴛᴄʜ** »** {b_name}\n\n**Downloaded by : {CR}**\n@taporibot_bot**'
-                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.**Tɪᴛʟᴇ » {name1} Tapori 🥷.pdf \n**Bᴀᴛᴄʜ** »**{b_name}\n\n**Downloaded by : {CR}**@taporibot_bot**'
+                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {name1} ({res}) Tapori 🥷.mkv\n**Bᴀᴛᴄʜ** »** {b_name}\n\n**Downloaded by » {CR}**\n@taporibot_bot**'
+                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.**Tɪᴛʟᴇ » {name1} Tapori 🥷.pdf \n**Bᴀᴛᴄʜ** »**{b_name}\n\n**Downloaded by » {CR}**\n@taporibot_bot**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
