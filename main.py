@@ -12,7 +12,7 @@ from pyrogram import Client, filters
 from p_bar import progress_bar
 from subprocess import getstatusoutput
 from aiohttp import ClientSession
-import helper
+from helper import api_id, api_hash, bot_token
 from logger import logging
 import time
 import asyncio
@@ -28,18 +28,18 @@ bot = Client("bot",
              api_hash= "a98b5be0127986be1cc2553dbd99765e")
 
 
-@bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER\n\n BOT MADE BY:- Tapori 2.0 😇")
 
 
-@bot.on_message(filters.command("rukja") & filters.user(ADMINS))
+@bot.on_message(filters.command("rukja"))
 async def restart_handler(_, m):
     await m.reply_text("**ruk gaya**😜😜", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["baby"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["baby"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**")
     input: Message = await bot.listen(editable.chat.id)
