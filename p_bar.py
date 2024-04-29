@@ -66,7 +66,7 @@ def hrt(seconds, precision = 0):
 
 timer = Timer()
 
-# designed by Kshitij
+# Powered By SURYA BISHNOI 
 async def progress_bar(current, total, reply, start):
     if timer.can_send():
         now = time.time()
@@ -92,7 +92,6 @@ async def progress_bar(current, total, reply, start):
             progress_bar = "▰" * completed_length + "▱" * remaining_length
             
             try:
-                await reply.edit(f'`╭──⌈📤 𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 📤⌋──╮ \n├🪐 {progress_bar}\n├🔝 𝙎𝙥𝙚𝙚𝙙 : {sp} \n├🚩 𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨 : {perc} \n├ 𝙇𝙤𝙖𝙙𝙚𝙙 : {cur}\n├🌈 𝙎𝙞𝙯𝙚 :  {tot} \n├🤖 𝙀𝙏𝘼 : {eta} \n╰────⌈ Tapori 2.0 ⌋────╯`\n') 
+                await reply.edit(f'\n **╭─⌯═⏫️🅄🄿🄻🄾🄰🄳🄸🄽🄶⏫️═⌯─╮**\n├🪐 {progress_bar}|﹝{perc}﹞ \n├🔝 Speed » {sp} \n├🚩 Processed » {cur}\n├🌈 Size - ETA » {tot} - {eta} \n├🤖🄱🅈  » 𝐒𝐔𝐑𝐘𝐀 𝐁𝐈𝐒𝐇𝐍𝐎𝐈 \n╰─═⚜️ @thebishnoi29_bot ⚜️═─╯\n`') 
             except FloodWait as e:
                 time.sleep(e.x)
-
